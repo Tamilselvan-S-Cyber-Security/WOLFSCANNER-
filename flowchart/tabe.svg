@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980" viewBox="0 0 1800 980" role="img" aria-labelledby="title desc">
+  <title id="title">Cyber Wolf Flowchart Features Table</title>
+  <desc id="desc">A themed SVG table showing the 6 stages of the Cyber Wolf flowchart with key functions and value added.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #2C2C2C; }
+      .card { fill: #1b1a2f; stroke: #373552; stroke-width: 2; }
+      .title { fill: #d7e6e1; font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 700; }
+      .subtitle { fill: #90a1b9; font-family: Arial, Helvetica, sans-serif; font-size: 16px; }
+      .hdr { fill: #373552; stroke: #25eab5; stroke-width: 1.5; }
+      .cell { fill: #2c2c2c; stroke: #575675; stroke-width: 1; }
+      .text-h { fill: #25eab5; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; }
+      .text { fill: #d7e6e1; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+      .stage { fill: #f5b944; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; }
+      .foot { fill: #90a1b9; font-family: Arial, Helvetica, sans-serif; font-size: 13px; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="980"/>
+  <rect class="card" x="40" y="40" width="1720" height="900" rx="14"/>
+
+  <text class="title" x="80" y="95">Cyber Wolf - Flowchart Features Table</text>
+  <text class="subtitle" x="80" y="125">Hackindia 2026 MEC | Team Cyber Wolf | Presentation-ready SVG table</text>
+
+  <!-- Table geometry -->
+  <!-- columns: 140 | 360 | 540 | 600 -->
+  <!-- x positions: 80, 220, 580, 1120, 1720 -->
+  <!-- row height: 105 -->
+
+  <!-- Header -->
+  <rect class="hdr" x="80" y="170" width="140" height="70"/>
+  <rect class="hdr" x="220" y="170" width="360" height="70"/>
+  <rect class="hdr" x="580" y="170" width="540" height="70"/>
+  <rect class="hdr" x="1120" y="170" width="600" height="70"/>
+
+  <text class="text-h" x="120" y="214">Stage</text>
+  <text class="text-h" x="250" y="214">Flowchart Block</text>
+  <text class="text-h" x="610" y="214">Key Function</text>
+  <text class="text-h" x="1150" y="214">Value Added</text>
+
+  <!-- Row 1 -->
+  <rect class="cell" x="80" y="240" width="140" height="105"/>
+  <rect class="cell" x="220" y="240" width="360" height="105"/>
+  <rect class="cell" x="580" y="240" width="540" height="105"/>
+  <rect class="cell" x="1120" y="240" width="600" height="105"/>
+  <text class="stage" x="122" y="297">1</text>
+  <text class="text" x="250" y="285">User Event Sources</text>
+  <text class="text" x="250" y="308">Page views, edits, search, special access</text>
+  <text class="text" x="610" y="285">Captures entry-point user activities</text>
+  <text class="text" x="610" y="308">for security-aware telemetry collection</text>
+  <text class="text" x="1150" y="285">Complete visibility over behavior signals</text>
+  <text class="text" x="1150" y="308">from the first interaction step</text>
+
+  <!-- Row 2 -->
+  <rect class="cell" x="80" y="345" width="140" height="105"/>
+  <rect class="cell" x="220" y="345" width="360" height="105"/>
+  <rect class="cell" x="580" y="345" width="540" height="105"/>
+  <rect class="cell" x="1120" y="345" width="600" height="105"/>
+  <text class="stage" x="122" y="402">2</text>
+  <text class="text" x="250" y="390">Sensor Collection Layer</text>
+  <text class="text" x="250" y="413">Identity + technical context + payload + time</text>
+  <text class="text" x="610" y="390">Builds rich, structured event packets</text>
+  <text class="text" x="610" y="413">with consistent context metadata</text>
+  <text class="text" x="1150" y="390">Improves event quality and analysis depth</text>
+  <text class="text" x="1150" y="413">for detection and investigation workflows</text>
+
+  <!-- Row 3 -->
+  <rect class="cell" x="80" y="450" width="140" height="105"/>
+  <rect class="cell" x="220" y="450" width="360" height="105"/>
+  <rect class="cell" x="580" y="450" width="540" height="105"/>
+  <rect class="cell" x="1120" y="450" width="600" height="105"/>
+  <text class="stage" x="122" y="507">3</text>
+  <text class="text" x="250" y="495">Pre Processing and Validation</text>
+  <text class="text" x="250" y="518">Cleaning, JSON serialization, schema normalization</text>
+  <text class="text" x="610" y="495">Prepares stable, API-safe payloads</text>
+  <text class="text" x="610" y="518">for secure transmission and storage</text>
+  <text class="text" x="1150" y="495">Reduces parsing errors and data inconsistency</text>
+  <text class="text" x="1150" y="518">across services and dashboards</text>
+
+  <!-- Row 4 -->
+  <rect class="cell" x="80" y="555" width="140" height="105"/>
+  <rect class="cell" x="220" y="555" width="360" height="105"/>
+  <rect class="cell" x="580" y="555" width="540" height="105"/>
+  <rect class="cell" x="1120" y="555" width="600" height="105"/>
+  <text class="stage" x="122" y="612">4</text>
+  <text class="text" x="250" y="600">Sensor API Core</text>
+  <text class="text" x="250" y="623">Authenticate, classify, store, respond</text>
+  <text class="text" x="610" y="600">Provides controlled event intake pipeline</text>
+  <text class="text" x="610" y="623">with validated storage lifecycle</text>
+  <text class="text" x="1150" y="600">Supports scalable and secure telemetry flow</text>
+  <text class="text" x="1150" y="623">for production-grade monitoring</text>
+
+  <!-- Row 5 -->
+  <rect class="cell" x="80" y="660" width="140" height="105"/>
+  <rect class="cell" x="220" y="660" width="360" height="105"/>
+  <rect class="cell" x="580" y="660" width="540" height="105"/>
+  <rect class="cell" x="1120" y="660" width="600" height="105"/>
+  <text class="stage" x="122" y="717">5</text>
+  <text class="text" x="250" y="705">Observation Layer</text>
+  <text class="text" x="250" y="728">Request/response logs and timeline tracking</text>
+  <text class="text" x="610" y="705">Maintains traceability and audit evidence</text>
+  <text class="text" x="610" y="728">for replay and troubleshooting</text>
+  <text class="text" x="1150" y="705">Faster debugging and incident response</text>
+  <text class="text" x="1150" y="728">with transparent operational history</text>
+
+  <!-- Row 6 -->
+  <rect class="cell" x="80" y="765" width="140" height="105"/>
+  <rect class="cell" x="220" y="765" width="360" height="105"/>
+  <rect class="cell" x="580" y="765" width="540" height="105"/>
+  <rect class="cell" x="1120" y="765" width="600" height="105"/>
+  <text class="stage" x="122" y="822">6</text>
+  <text class="text" x="250" y="810">Intelligence Output</text>
+  <text class="text" x="250" y="833">Anomaly detection and alert/report feeds</text>
+  <text class="text" x="610" y="810">Transforms telemetry into decisions</text>
+  <text class="text" x="610" y="833">for security and operations teams</text>
+  <text class="text" x="1150" y="810">Actionable insights for defense strategy</text>
+  <text class="text" x="1150" y="833">and continuous system improvement</text>
+
+  <text class="foot" x="80" y="915">File: flowchart/tabe.svg | Suggested export: PNG 2x for PPT or website hero section</text>
+</svg>

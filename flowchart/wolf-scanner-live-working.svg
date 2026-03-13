@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Wolf Scanner Live Working Flowchart</title>
+  <desc id="desc">Live working flowchart for Cyber Wolf scanner from user request to alert and dashboard output.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #2C2C2C; }
+      .header { fill: #373552; }
+      .panel { fill: #242434; stroke: #575675; stroke-width: 2; rx: 12; }
+      .node { fill: #1f1f2e; stroke: #90a1b9; stroke-width: 2; rx: 10; animation: pulseNode 3.2s ease-in-out infinite; }
+      .n1 { stroke: #25eab5; }
+      .n2 { stroke: #5bcfbb; }
+      .n3 { stroke: #f5b944; }
+      .n4 { stroke: #fb6e88; }
+      .title { fill: #d7e6e1; font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 700; }
+      .sub { fill: #90a1b9; font-family: Arial, Helvetica, sans-serif; font-size: 17px; }
+      .text { fill: #d7e6e1; font-family: Arial, Helvetica, sans-serif; font-size: 17px; }
+      .small { fill: #90a1b9; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+      .arrow { stroke: #d7e6e1; stroke-width: 2.5; fill: none; marker-end: url(#arr); stroke-dasharray: 10 8; animation: flowMove 1.8s linear infinite; }
+      .live { fill: #25eab5; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; animation: liveBlink 1.2s ease-in-out infinite; }
+      .d1 { animation-delay: 0s; }
+      .d2 { animation-delay: 0.2s; }
+      .d3 { animation-delay: 0.4s; }
+      .d4 { animation-delay: 0.6s; }
+      .d5 { animation-delay: 0.8s; }
+      .d6 { animation-delay: 1s; }
+      .d7 { animation-delay: 1.2s; }
+      .d8 { animation-delay: 1.4s; }
+      @keyframes flowMove {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -36; }
+      }
+      @keyframes pulseNode {
+        0%, 100% { opacity: 0.92; }
+        50% { opacity: 1; }
+      }
+      @keyframes liveBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#d7e6e1"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="900"/>
+  <rect class="header" x="40" y="30" width="1520" height="90" rx="12"/>
+  <text class="title" x="70" y="86">Wolf Scanner - Live Working Flowchart</text>
+  <text class="sub" x="70" y="112">Real-time security telemetry pipeline for AI-assisted development environments</text>
+
+  <rect class="panel" x="60" y="150" width="1480" height="700"/>
+
+  <!-- Nodes -->
+  <rect class="node n1 d1" x="100" y="250" width="240" height="110"/>
+  <text class="text" x="125" y="295">1. User Request</text>
+  <text class="small" x="125" y="322">web action / API event</text>
+
+  <rect class="node n1 d2" x="390" y="250" width="260" height="110"/>
+  <text class="text" x="415" y="295">2. Event Capture</text>
+  <text class="small" x="415" y="322">identity + context + time</text>
+
+  <rect class="node n2 d3" x="700" y="250" width="260" height="110"/>
+  <text class="text" x="725" y="295">3. Data Clean</text>
+  <text class="small" x="725" y="322">normalize and serialize JSON</text>
+
+  <rect class="node n2 d4" x="1010" y="250" width="260" height="110"/>
+  <text class="text" x="1035" y="295">4. API Validate</text>
+  <text class="small" x="1035" y="322">auth + schema checks</text>
+
+  <rect class="node n3 d5" x="1320" y="250" width="180" height="110"/>
+  <text class="text" x="1340" y="295">5. Store</text>
+  <text class="small" x="1340" y="322">event database</text>
+
+  <rect class="node n3 d6" x="300" y="520" width="300" height="120"/>
+  <text class="text" x="325" y="567">6. Live Log Stream</text>
+  <text class="small" x="325" y="595">request/response tracking</text>
+
+  <rect class="node n4 d7" x="670" y="520" width="300" height="120"/>
+  <text class="text" x="695" y="567">7. Threat Analysis</text>
+  <text class="small" x="695" y="595">pattern + anomaly detection</text>
+
+  <rect class="node n4 d8" x="1040" y="520" width="360" height="120"/>
+  <text class="text" x="1065" y="567">8. Alerts + Dashboard</text>
+  <text class="small" x="1065" y="595">security action and reporting</text>
+
+  <!-- Arrows top row -->
+  <line class="arrow" x1="340" y1="305" x2="390" y2="305"/>
+  <line class="arrow" x1="650" y1="305" x2="700" y2="305"/>
+  <line class="arrow" x1="960" y1="305" x2="1010" y2="305"/>
+  <line class="arrow" x1="1270" y1="305" x2="1320" y2="305"/>
+
+  <!-- Flow down -->
+  <path class="arrow" d="M1410 360 L1410 450 L450 450 L450 520"/>
+  <line class="arrow" x1="600" y1="580" x2="670" y2="580"/>
+  <line class="arrow" x1="970" y1="580" x2="1040" y2="580"/>
+
+  <text class="live" x="110" y="210">LIVE FLOW</text>
+  <text class="small" x="110" y="685">Outcome: AI-era coding activity becomes security-focused, traceable, and actionable.</text>
+</svg>

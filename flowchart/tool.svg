@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <defs>
+    <style>
+      .bg { fill: #2c2c2c; }
+      .card { fill: #1f1f2e; stroke-width: 2; rx: 12; }
+      .txt { fill: #d7e6e1; font-family: Arial, sans-serif; }
+      .step { font-size: 24px; font-weight: 700; }
+      .desc { font-size: 18px; }
+      .line { stroke: #90a1b9; stroke-width: 3; fill: none; stroke-linecap: round; }
+      .pulse { fill: #25eab5; }
+      .flow {
+        stroke-dasharray: 16 10;
+        animation: move 2.2s linear infinite;
+      }
+      @keyframes move {
+        to { stroke-dashoffset: -52; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="760"/>
+
+  <rect class="card" x="80" y="70" width="1120" height="120" stroke="#25eab5"/>
+  <text class="txt step" x="120" y="126">1) User Activity Captured</text>
+  <text class="txt desc" x="120" y="162">Page view, field edit, search event, localhost/IPv6 access</text>
+
+  <rect class="card" x="80" y="240" width="1120" height="120" stroke="#5bcfbb"/>
+  <text class="txt step" x="120" y="296">2) Sensor Layer Enrichment</text>
+  <text class="txt desc" x="120" y="332">Attach identity, technical context, payload, and UTC timestamp</text>
+
+  <rect class="card" x="80" y="410" width="1120" height="120" stroke="#f5b944"/>
+  <text class="txt step" x="120" y="466">3) Pre-Processing and API Delivery</text>
+  <text class="txt desc" x="120" y="502">Clean null values, serialize JSON fields, normalize schema, send API request</text>
+
+  <rect class="card" x="80" y="580" width="1120" height="120" stroke="#90a1b9"/>
+  <text class="txt step" x="120" y="636">4) Logging, Detection, and Reporting</text>
+  <text class="txt desc" x="120" y="672">Store event trail, detect anomalies, and feed dashboards/alerts</text>
+
+  <line class="line flow" x1="640" y1="190" x2="640" y2="240"/>
+  <line class="line flow" x1="640" y1="360" x2="640" y2="410"/>
+  <line class="line flow" x1="640" y1="530" x2="640" y2="580"/>
+
+  <circle class="pulse" cx="640" cy="190" r="6">
+    <animate attributeName="r" values="5;9;5" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="pulse" cx="640" cy="360" r="6">
+    <animate attributeName="r" values="5;9;5" dur="1.2s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="pulse" cx="640" cy="530" r="6">
+    <animate attributeName="r" values="5;9;5" dur="1.2s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

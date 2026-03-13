@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#2C2C2C"/>
+  <rect x="60" y="50" width="1160" height="90" rx="12" fill="#373552"/>
+  <text x="90" y="107" fill="#d7e6e1" font-size="38" font-family="Arial" font-weight="700">Project Abstract</text>
+
+  <rect x="90" y="180" width="1100" height="500" rx="14" fill="#1f1f2e" stroke="#575675" stroke-width="2"/>
+  <text x="130" y="250" fill="#25eab5" font-size="28" font-family="Arial" font-weight="700">Cyber Wolf Overview</text>
+  <text x="130" y="305" fill="#d7e6e1" font-size="22" font-family="Arial">Cyber Wolf is a lightweight framework that captures security-aware</text>
+  <text x="130" y="340" fill="#d7e6e1" font-size="22" font-family="Arial">web activity signals and converts them into structured telemetry.</text>
+  <text x="130" y="390" fill="#d7e6e1" font-size="22" font-family="Arial">It enriches each event with user, IP, device, URL, and timestamp</text>
+  <text x="130" y="425" fill="#d7e6e1" font-size="22" font-family="Arial">context before sending to a central API for validation and storage.</text>
+  <text x="130" y="475" fill="#d7e6e1" font-size="22" font-family="Arial">The output powers anomaly detection, dashboards, alerts, and</text>
+  <text x="130" y="510" fill="#d7e6e1" font-size="22" font-family="Arial">faster incident investigation for modern web applications.</text>
+  <text x="130" y="585" fill="#f5b944" font-size="22" font-family="Arial">Focus: security visibility + behavior intelligence + audit readiness.</text>
+</svg>

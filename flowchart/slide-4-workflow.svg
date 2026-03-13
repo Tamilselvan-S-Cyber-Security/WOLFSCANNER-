@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#d7e6e1"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#2C2C2C"/>
+  <rect x="60" y="50" width="1160" height="90" rx="12" fill="#373552"/>
+  <text x="90" y="107" fill="#d7e6e1" font-size="38" font-family="Arial" font-weight="700">System Workflow</text>
+
+  <rect x="80" y="240" width="210" height="95" rx="10" fill="#1f1f2e" stroke="#25eab5" stroke-width="2"/>
+  <rect x="330" y="240" width="210" height="95" rx="10" fill="#1f1f2e" stroke="#5bcfbb" stroke-width="2"/>
+  <rect x="580" y="240" width="210" height="95" rx="10" fill="#1f1f2e" stroke="#f5b944" stroke-width="2"/>
+  <rect x="830" y="240" width="210" height="95" rx="10" fill="#1f1f2e" stroke="#90a1b9" stroke-width="2"/>
+  <rect x="1080" y="240" width="130" height="95" rx="10" fill="#1f1f2e" stroke="#fb6e88" stroke-width="2"/>
+
+  <text x="95" y="280" fill="#d7e6e1" font-size="19" font-family="Arial">User Events</text>
+  <text x="345" y="280" fill="#d7e6e1" font-size="19" font-family="Arial">Collection</text>
+  <text x="595" y="280" fill="#d7e6e1" font-size="19" font-family="Arial">Pre-Process</text>
+  <text x="845" y="280" fill="#d7e6e1" font-size="19" font-family="Arial">API Core</text>
+  <text x="1095" y="280" fill="#d7e6e1" font-size="19" font-family="Arial">Intel</text>
+
+  <line x1="290" y1="288" x2="330" y2="288" stroke="#d7e6e1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="540" y1="288" x2="580" y2="288" stroke="#d7e6e1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="790" y1="288" x2="830" y2="288" stroke="#d7e6e1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1040" y1="288" x2="1080" y2="288" stroke="#d7e6e1" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <text x="90" y="430" fill="#90a1b9" font-size="22" font-family="Arial">Flow: Source Events -> Context Enrichment -> Normalization -> Validation/Storage -> Detection/Reports</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#2C2C2C"/>
+  <rect x="60" y="50" width="1160" height="110" rx="12" fill="#373552"/>
+  <text x="90" y="105" fill="#d7e6e1" font-size="42" font-family="Arial" font-weight="700">Cyber Wolf - Smart Sensor Analytics</text>
+  <text x="90" y="140" fill="#90a1b9" font-size="22" font-family="Arial">The Hackindia Hackathon 2026 (MEC)</text>
+
+  <rect x="120" y="210" width="1040" height="420" rx="14" fill="#1f1f2e" stroke="#575675" stroke-width="2"/>
+  <text x="160" y="285" fill="#25eab5" font-size="30" font-family="Arial" font-weight="700">Team Cyber Wolf</text>
+  <text x="160" y="340" fill="#d7e6e1" font-size="28" font-family="Arial">Pugazhmani K</text>
+  <text x="160" y="390" fill="#d7e6e1" font-size="28" font-family="Arial">Arun K</text>
+  <text x="160" y="440" fill="#d7e6e1" font-size="28" font-family="Arial">Tamilselvan S</text>
+  <text x="160" y="520" fill="#f5b944" font-size="24" font-family="Arial">Tagline: Security-aware telemetry for every web app.</text>
+</svg>

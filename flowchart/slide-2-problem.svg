@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#2C2C2C"/>
+  <rect x="60" y="50" width="1160" height="90" rx="12" fill="#373552"/>
+  <text x="90" y="107" fill="#d7e6e1" font-size="38" font-family="Arial" font-weight="700">Problem Statement</text>
+
+  <rect x="90" y="190" width="1100" height="470" rx="14" fill="#1f1f2e" stroke="#575675" stroke-width="2"/>
+  <text x="130" y="270" fill="#fb6e88" font-size="26" font-family="Arial" font-weight="700">High Priority Problem</text>
+  <text x="130" y="320" fill="#d7e6e1" font-size="24" font-family="Arial">- Programmers use AI tools for fast coding and problem solving</text>
+  <text x="130" y="370" fill="#d7e6e1" font-size="24" font-family="Arial">- Security checks are often not focused during AI-assisted development</text>
+  <text x="130" y="420" fill="#d7e6e1" font-size="24" font-family="Arial">- This creates hidden risks, weak audit trails, and late issue detection</text>
+  <text x="130" y="500" fill="#f5b944" font-size="24" font-family="Arial" font-weight="700">Our Solution Need</text>
+  <text x="130" y="545" fill="#d7e6e1" font-size="24" font-family="Arial">A security-focused telemetry tool that monitors AI-era development behavior.</text>
+</svg>
