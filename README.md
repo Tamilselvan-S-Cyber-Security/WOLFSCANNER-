@@ -1,4 +1,7 @@
 ## Cyber Wolf – Smart Sensor Analytics
+<p align="center">
+  <img width="350" height="350" src="logo/logos.png">
+</p>
 
 **Hackathon**: The Hackindia Hackathon 2026 (MEC)  
 **Team**: Cyber Wolf
