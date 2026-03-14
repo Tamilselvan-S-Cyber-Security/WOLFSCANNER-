@@ -1,0 +1,394 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1830"/>
+      <stop offset="100%" stop-color="#0f0e1a"/>
+    </linearGradient>
+
+    <!-- Node gradients -->
+    <linearGradient id="gradBrowser" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e4a7a"/>
+      <stop offset="100%" stop-color="#1a2d4a"/>
+    </linearGradient>
+    <linearGradient id="gradContent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a3570"/>
+      <stop offset="100%" stop-color="#2a1a48"/>
+    </linearGradient>
+    <linearGradient id="gradStorage" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a4040"/>
+      <stop offset="100%" stop-color="#0f2828"/>
+    </linearGradient>
+    <linearGradient id="gradBackground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#373552"/>
+      <stop offset="100%" stop-color="#22213a"/>
+    </linearGradient>
+    <linearGradient id="gradPopup" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a4a1a"/>
+      <stop offset="100%" stop-color="#222e0f"/>
+    </linearGradient>
+    <linearGradient id="gradSIEM" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7a2020"/>
+      <stop offset="100%" stop-color="#4a1010"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="glowBlue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="nodeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Arrowhead markers -->
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#5bc8f5"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#7cb87c"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#c87070"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#a080f0"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#f0c060"/>
+    </marker>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="900" height="620" fill="url(#bgMain)" rx="16"/>
+  <!-- Subtle grid -->
+  <g stroke="#ffffff" stroke-width="0.3" opacity="0.04">
+    <line x1="0" y1="60" x2="900" y2="60"/>
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="360" x2="900" y2="360"/>
+    <line x1="0" y1="420" x2="900" y2="420"/>
+    <line x1="0" y1="480" x2="900" y2="480"/>
+    <line x1="0" y1="540" x2="900" y2="540"/>
+    <line x1="0" y1="600" x2="900" y2="600"/>
+    <line x1="90"  y1="0" x2="90"  y2="620"/>
+    <line x1="180" y1="0" x2="180" y2="620"/>
+    <line x1="270" y1="0" x2="270" y2="620"/>
+    <line x1="360" y1="0" x2="360" y2="620"/>
+    <line x1="450" y1="0" x2="450" y2="620"/>
+    <line x1="540" y1="0" x2="540" y2="620"/>
+    <line x1="630" y1="0" x2="630" y2="620"/>
+    <line x1="720" y1="0" x2="720" y2="620"/>
+    <line x1="810" y1="0" x2="810" y2="620"/>
+  </g>
+
+  <!-- TITLE BAR -->
+  <rect x="0" y="0" width="900" height="50" fill="#373552" rx="16"/>
+  <rect x="0" y="34" width="900" height="16" fill="#373552"/>
+  <image href="logo.svg" x="12" y="7" width="34" height="34"/>
+  <text x="54" y="32" fill="#e0e0e0" font-size="18" font-weight="700" letter-spacing="1">Wolf Scanner 2026</text>
+  <text x="56" y="43" fill="#7cb87c" font-size="9" letter-spacing="2">CHROME EXTENSION - WORKING FLOW</text>
+  <!-- live pulse dot -->
+  <circle cx="870" cy="25" r="6" fill="#7cb87c" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.4s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="6;9;6" dur="1.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="882" y="29" fill="#7cb87c" font-size="9">LIVE</text>
+
+  <!-- ===================================================
+       ROW 1: Browser -> content.js -> background.js -> API
+       =================================================== -->
+
+  <!-- NODE 1: Browser / User (x=40, y=90) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="40" y="90" width="140" height="100" rx="10" fill="url(#gradBrowser)" stroke="#5bc8f5" stroke-width="1.5"/>
+  </g>
+  <!-- browser icon -->
+  <rect x="68" y="104" width="86" height="54" rx="5" fill="none" stroke="#5bc8f5" stroke-width="1.5"/>
+  <rect x="68" y="104" width="86" height="14" rx="5" fill="#5bc8f5" opacity="0.25"/>
+  <circle cx="77" cy="111" r="3" fill="#c87070"/>
+  <circle cx="87" cy="111" r="3" fill="#f0c060"/>
+  <circle cx="97" cy="111" r="3" fill="#7cb87c"/>
+  <rect x="74" y="123" width="74" height="5" rx="2" fill="#5bc8f5" opacity="0.4"/>
+  <rect x="74" y="133" width="50" height="5" rx="2" fill="#5bc8f5" opacity="0.25"/>
+  <rect x="74" y="143" width="60" height="5" rx="2" fill="#5bc8f5" opacity="0.2"/>
+  <text x="110" y="183" fill="#a0d8f0" font-size="11" text-anchor="middle" font-weight="600">Browser / User</text>
+  <!-- event badges -->
+  <g font-size="8">
+    <rect x="43" y="196" width="60" height="14" rx="3" fill="#1a3050" stroke="#5bc8f5" stroke-width="0.8"/>
+    <text x="73" y="206" text-anchor="middle" fill="#a0d8f0">page_view</text>
+    <rect x="107" y="196" width="70" height="14" rx="3" fill="#1a3050" stroke="#5bc8f5" stroke-width="0.8"/>
+    <text x="142" y="206" text-anchor="middle" fill="#a0d8f0">link_click</text>
+    <rect x="43" y="213" width="72" height="14" rx="3" fill="#1a3050" stroke="#5bc8f5" stroke-width="0.8"/>
+    <text x="79" y="223" text-anchor="middle" fill="#a0d8f0">button_click</text>
+    <rect x="119" y="213" width="60" height="14" rx="3" fill="#1a3050" stroke="#5bc8f5" stroke-width="0.8"/>
+    <text x="149" y="223" text-anchor="middle" fill="#a0d8f0">field_edit</text>
+    <rect x="43" y="230" width="74" height="14" rx="3" fill="#1a3050" stroke="#5bc8f5" stroke-width="0.8"/>
+    <text x="80" y="240" text-anchor="middle" fill="#a0d8f0">form_submit</text>
+    <rect x="121" y="230" width="58" height="14" rx="3" fill="#1a3050" stroke="#5bc8f5" stroke-width="0.8"/>
+    <text x="150" y="240" text-anchor="middle" fill="#a0d8f0">SPA nav</text>
+  </g>
+
+  <!-- ARROW 1: Browser -> content.js -->
+  <line x1="184" y1="140" x2="270" y2="140" stroke="#5bc8f5" stroke-width="2" marker-end="url(#arrowBlue)" stroke-dasharray="6,3">
+    <animate attributeName="stroke-dashoffset" values="0;-18" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <circle r="4" fill="#a0f0ff">
+    <animateMotion path="M184,140 L270,140" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="227" y="133" fill="#5bc8f5" font-size="9" text-anchor="middle">events</text>
+
+  <!-- NODE 2: content.js (x=275, y=90) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="275" y="90" width="140" height="100" rx="10" fill="url(#gradContent)" stroke="#a080f0" stroke-width="1.5"/>
+  </g>
+  <!-- code brackets icon -->
+  <g fill="none" stroke="#a080f0" stroke-width="1.5" stroke-linecap="round">
+    <polyline points="305,118 295,128 305,138"/>
+    <polyline points="325,118 335,128 325,138"/>
+    <line x1="313" y1="115" x2="317" y2="141"/>
+  </g>
+  <text x="295" y="162" fill="#a080f0" font-size="8" opacity="0.7">* click / focus / submit</text>
+  <text x="295" y="173" fill="#a080f0" font-size="8" opacity="0.7">* URL, title, referer</text>
+  <text x="295" y="184" fill="#a080f0" font-size="8" opacity="0.7">* SPA: pushState hook</text>
+  <text x="345" y="198" fill="#d0b0ff" font-size="11" text-anchor="middle" font-weight="600">content.js</text>
+
+  <!-- ARROW 2: content.js -> background.js -->
+  <line x1="419" y1="140" x2="505" y2="140" stroke="#a080f0" stroke-width="2" marker-end="url(#arrowPurple)" stroke-dasharray="6,3">
+    <animate attributeName="stroke-dashoffset" values="0;-18" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <circle r="4" fill="#c0a0ff">
+    <animateMotion path="M419,140 L505,140" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="462" y="133" fill="#a080f0" font-size="9" text-anchor="middle">sendMessage</text>
+  <text x="462" y="143" fill="#a080f0" font-size="8" text-anchor="middle">LOG_ACTIVITY</text>
+
+  <!-- NODE 3: background.js (x=510, y=90) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="510" y="90" width="150" height="100" rx="10" fill="url(#gradBackground)" stroke="#f0c060" stroke-width="1.5"/>
+  </g>
+  <!-- rotating gear icon -->
+  <g transform="translate(535,125)" fill="none" stroke="#f0c060" stroke-width="1.5">
+    <circle cx="0" cy="0" r="10"/>
+    <circle cx="0" cy="0" r="4" fill="#f0c060" opacity="0.4"/>
+    <line x1="0" y1="-13" x2="0" y2="-10"/>
+    <line x1="0" y1="10"  x2="0" y2="13"/>
+    <line x1="-13" y1="0" x2="-10" y2="0"/>
+    <line x1="10"  y1="0" x2="13"  y2="0"/>
+    <line x1="-9.2" y1="-9.2" x2="-7.1" y2="-7.1"/>
+    <line x1="7.1"  y1="7.1"  x2="9.2"  y2="9.2"/>
+    <line x1="9.2"  y1="-9.2" x2="7.1"  y2="-7.1"/>
+    <line x1="-7.1" y1="7.1"  x2="-9.2" y2="9.2"/>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
+  </g>
+  <text x="560" y="119" fill="#f0c060" font-size="8.5" opacity="0.8">* onMessage listener</text>
+  <text x="560" y="130" fill="#f0c060" font-size="8.5" opacity="0.8">* storage.sync.get</text>
+  <text x="560" y="141" fill="#f0c060" font-size="8.5" opacity="0.8">* buildFormData()</text>
+  <text x="560" y="152" fill="#f0c060" font-size="8.5" opacity="0.8">* fetch() POST</text>
+  <text x="560" y="163" fill="#f0c060" font-size="8.5" opacity="0.8">* Api-Key header</text>
+  <text x="560" y="174" fill="#f0c060" font-size="8.5" opacity="0.8">* sendResponse(ok)</text>
+  <text x="585" y="198" fill="#f5d060" font-size="11" text-anchor="middle" font-weight="600">background.js</text>
+
+  <!-- ARROW 3: background.js -> SIEM API -->
+  <line x1="664" y1="140" x2="750" y2="140" stroke="#f0c060" stroke-width="2.5" marker-end="url(#arrowYellow)" stroke-dasharray="6,3">
+    <animate attributeName="stroke-dashoffset" values="0;-18" dur="0.7s" repeatCount="indefinite"/>
+  </line>
+  <circle r="5" fill="#f0c060">
+    <animateMotion path="M664,140 L750,140" dur="0.9s" begin="0.1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="0.9s" begin="0.1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="707" y="131" fill="#f0c060" font-size="9" text-anchor="middle">POST</text>
+  <text x="707" y="141" fill="#f0c060" font-size="8" text-anchor="middle">form-urlencoded</text>
+
+  <!-- NODE 4: Wolf SIEM API (x=754, y=90) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="754" y="90" width="128" height="100" rx="10" fill="url(#gradSIEM)" stroke="#f08080" stroke-width="1.5"/>
+  </g>
+  <!-- server stack icon -->
+  <g fill="none" stroke="#f08080" stroke-width="1.2">
+    <rect x="777" y="103" width="82" height="14" rx="3"/>
+    <rect x="777" y="121" width="82" height="14" rx="3"/>
+    <rect x="777" y="139" width="82" height="14" rx="3"/>
+    <circle cx="850" cy="110" r="3" fill="#7cb87c">
+      <animate attributeName="fill" values="#7cb87c;#f08080;#7cb87c" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="128" r="3" fill="#7cb87c">
+      <animate attributeName="fill" values="#7cb87c;#f08080;#7cb87c" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="146" r="3" fill="#7cb87c">
+      <animate attributeName="fill" values="#7cb87c;#f08080;#7cb87c" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="789" y="112" fill="#f0a0a0" font-size="8">localhost/cyberwolf</text>
+  <text x="789" y="130" fill="#f0a0a0" font-size="8">/sensor/ Api-Key</text>
+  <text x="789" y="148" fill="#f0a0a0" font-size="8">HTTP 200 / Error</text>
+  <text x="818" y="198" fill="#f08080" font-size="11" text-anchor="middle" font-weight="600">Wolf SIEM API</text>
+
+  <!-- RESPONSE arrow: SIEM -> background.js (curved over top) -->
+  <path d="M818,90 Q818,66 585,66 Q352,66 585,90" fill="none" stroke="#7cb87c" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowGreen)" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.7s" repeatCount="indefinite"/>
+  </path>
+  <circle r="3.5" fill="#7cb87c" opacity="0.8">
+    <animateMotion path="M818,90 Q818,66 585,66 Q352,66 585,90" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="585" y="62" fill="#7cb87c" font-size="9" text-anchor="middle">HTTP response { ok: true }</text>
+
+  <!-- ===================================================
+       ROW 2: storage.sync <-> background <-> popup
+       =================================================== -->
+
+  <!-- NODE 5: chrome.storage.sync (x=275, y=300) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="275" y="300" width="140" height="90" rx="10" fill="url(#gradStorage)" stroke="#5bc8f5" stroke-width="1.5"/>
+  </g>
+  <!-- DB cylinder -->
+  <ellipse cx="345" cy="316" rx="30" ry="8" fill="none" stroke="#40c0c0" stroke-width="1.2"/>
+  <ellipse cx="345" cy="356" rx="30" ry="8" fill="none" stroke="#40c0c0" stroke-width="1.2"/>
+  <line x1="315" y1="316" x2="315" y2="356" stroke="#40c0c0" stroke-width="1.2"/>
+  <line x1="375" y1="316" x2="375" y2="356" stroke="#40c0c0" stroke-width="1.2"/>
+  <text x="345" y="339" fill="#80e0e0" font-size="8.5" text-anchor="middle">apiKey</text>
+  <text x="345" y="351" fill="#80e0e0" font-size="8.5" text-anchor="middle">userName</text>
+  <text x="345" y="398" fill="#80e0e0" font-size="11" text-anchor="middle" font-weight="600">storage.sync</text>
+
+  <!-- Arrow: background.js -> storage (get) -->
+  <path d="M585,194 Q585,270 419,320" fill="none" stroke="#f0c060" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowYellow)" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <circle r="3" fill="#f0c060" opacity="0.8">
+    <animateMotion path="M585,194 Q585,270 419,320" dur="1.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="530" y="272" fill="#f0c060" font-size="9" opacity="0.85">storage.get</text>
+
+  <!-- Arrow: storage -> background.js (return apiKey) -->
+  <path d="M419,340 Q500,340 510,194" fill="none" stroke="#5bc8f5" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <text x="504" y="310" fill="#5bc8f5" font-size="9" opacity="0.7">apiKey + userName</text>
+
+  <!-- NODE 6: popup.html / popup.js (x=40, y=300) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="40" y="300" width="140" height="90" rx="10" fill="url(#gradPopup)" stroke="#7cb87c" stroke-width="1.5"/>
+  </g>
+  <!-- popup ui sketch -->
+  <rect x="58" y="312" width="104" height="64" rx="4" fill="none" stroke="#7cb87c" stroke-width="1"/>
+  <rect x="58" y="312" width="104" height="14" rx="4" fill="#7cb87c" opacity="0.2"/>
+  <text x="110" y="323" fill="#a0e0a0" font-size="8" text-anchor="middle">Wolf Scanner 2026</text>
+  <rect x="64" y="332" width="92" height="10" rx="2" fill="#1a2a1a" stroke="#4a7a4a" stroke-width="0.8"/>
+  <text x="67" y="340" fill="#60a060" font-size="7">API Key ...</text>
+  <rect x="64" y="347" width="92" height="10" rx="2" fill="#1a2a1a" stroke="#4a7a4a" stroke-width="0.8"/>
+  <text x="67" y="355" fill="#60a060" font-size="7">Username</text>
+  <rect x="64" y="362" width="92" height="10" rx="3" fill="#374a37"/>
+  <text x="110" y="370" fill="#a0e0a0" font-size="7" text-anchor="middle">Save</text>
+  <text x="110" y="398" fill="#7cb87c" font-size="11" text-anchor="middle" font-weight="600">popup.html/js</text>
+
+  <!-- Arrow: popup -> storage.set -->
+  <line x1="184" y1="345" x2="271" y2="345" stroke="#7cb87c" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrowGreen)">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <circle r="3" fill="#7cb87c">
+    <animateMotion path="M184,345 L271,345" dur="1.2s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1.2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="228" y="339" fill="#7cb87c" font-size="9" text-anchor="middle">storage.set</text>
+  <text x="228" y="349" fill="#7cb87c" font-size="8" text-anchor="middle">{apiKey, userName}</text>
+
+  <!-- Arrow: storage -> popup.get (on open) -->
+  <path d="M280,300 Q250,280 184,300" fill="none" stroke="#5bc8f5" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arrowBlue)" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="0.9s" repeatCount="indefinite"/>
+  </path>
+  <text x="230" y="282" fill="#5bc8f5" font-size="8.5" opacity="0.8">storage.get (on open)</text>
+
+  <!-- ===================================================
+       ROW 3: POST Payload detail card
+       =================================================== -->
+
+  <!-- NODE 7: Payload Fields (x=510, y=290) -->
+  <g filter="url(#nodeShadow)">
+    <rect x="510" y="290" width="364" height="220" rx="10" fill="#12111f" stroke="#454370" stroke-width="1.2"/>
+  </g>
+  <rect x="510" y="290" width="364" height="24" rx="10" fill="#373552"/>
+  <rect x="510" y="302" width="364" height="12" fill="#373552"/>
+  <text x="692" y="307" fill="#e0e0e0" font-size="10.5" text-anchor="middle" font-weight="700" letter-spacing="1">POST PAYLOAD - buildFormData()</text>
+
+  <!-- table header -->
+  <g font-size="9" fill="#b0b0b0">
+    <text x="524" y="330" fill="#5bc8f5" font-weight="600">Field</text>
+    <text x="630" y="330" fill="#7cb87c" font-weight="600">Value / Source</text>
+    <line x1="519" y1="334" x2="869" y2="334" stroke="#454370" stroke-width="0.8"/>
+    <line x1="519" y1="334" x2="519" y2="480" stroke="#454370" stroke-width="0.8"/>
+    <line x1="625" y1="334" x2="625" y2="480" stroke="#454370" stroke-width="0.8"/>
+    <line x1="869" y1="334" x2="869" y2="480" stroke="#454370" stroke-width="0.8"/>
+    <!-- rows -->
+    <text x="524" y="348" fill="#a0d8f0">userName</text>
+    <text x="630" y="348" fill="#c0c0c0">storage.sync -- 'anonymous'</text>
+    <text x="524" y="362" fill="#a0d8f0">url</text>
+    <text x="630" y="362" fill="#c0c0c0">window.location.href</text>
+    <text x="524" y="376" fill="#a0d8f0">pageTitle</text>
+    <text x="630" y="376" fill="#c0c0c0">document.title</text>
+    <text x="524" y="390" fill="#a0d8f0">userAgent</text>
+    <text x="630" y="390" fill="#c0c0c0">navigator.userAgent</text>
+    <text x="524" y="404" fill="#a0d8f0">eventTime</text>
+    <text x="630" y="404" fill="#c0c0c0">formatEventTime(new Date())</text>
+    <text x="524" y="418" fill="#a0d8f0">httpReferer</text>
+    <text x="630" y="418" fill="#c0c0c0">document.referrer</text>
+    <text x="524" y="432" fill="#a0d8f0">browserLanguage</text>
+    <text x="630" y="432" fill="#c0c0c0">navigator.language</text>
+    <text x="524" y="446" fill="#a0d8f0">eventType</text>
+    <text x="630" y="446" fill="#c0c0c0">page_view / link_click / field_edit ...</text>
+    <text x="524" y="460" fill="#a0d8f0">fieldHistory[]</text>
+    <text x="630" y="460" fill="#c0c0c0">only on field_edit events</text>
+    <text x="524" y="474" fill="#a0d8f0">payload[]</text>
+    <text x="630" y="474" fill="#c0c0c0">formAction + httpMethod (search)</text>
+  </g>
+
+  <!-- Api-Key header badge -->
+  <rect x="519" y="485" width="355" height="18" rx="4" fill="#2a1a10" stroke="#f0c060" stroke-width="0.8"/>
+  <text x="696" y="497" fill="#f0c060" font-size="9" text-anchor="middle">Header: Api-Key: stored apiKey  -  Content-Type: application/x-www-form-urlencoded</text>
+
+  <!-- Arrow: background -> payload card -->
+  <path d="M585,194 L585,287" fill="none" stroke="#f0c060" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowYellow)" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <text x="600" y="248" fill="#f0c060" font-size="9" opacity="0.7">build payload</text>
+
+  <!-- ===================================================
+       LEGEND
+       =================================================== -->
+  <rect x="40" y="420" width="230" height="172" rx="8" fill="#12111f" stroke="#373552" stroke-width="1"/>
+  <text x="155" y="438" fill="#e0e0e0" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">LEGEND</text>
+
+  <line x1="56" y1="454" x2="96" y2="454" stroke="#5bc8f5" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="104" y="458" fill="#a0d8f0" font-size="9">Browser events -&gt; content.js</text>
+
+  <line x1="56" y1="472" x2="96" y2="472" stroke="#a080f0" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="104" y="476" fill="#c0a0ff" font-size="9">content.js -&gt; background.js</text>
+
+  <line x1="56" y1="490" x2="96" y2="490" stroke="#f0c060" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="104" y="494" fill="#f0d080" font-size="9">background.js -&gt; API / storage</text>
+
+  <line x1="56" y1="508" x2="96" y2="508" stroke="#7cb87c" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="104" y="512" fill="#a0e0a0" font-size="9">Success response / storage.set</text>
+
+  <line x1="56" y1="526" x2="96" y2="526" stroke="#5bc8f5" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="104" y="530" fill="#a0d8f0" font-size="9">storage.get (read on open)</text>
+
+  <!-- animated live indicator -->
+  <rect x="48" y="543" width="214" height="40" rx="5" fill="#1a1a2a" stroke="#454370" stroke-width="0.8"/>
+  <circle cx="65" cy="563" r="5" fill="#7cb87c">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="78" y="567" fill="#7cb87c" font-size="9">Data flows every browser interaction</text>
+  <text x="78" y="578" fill="#5bc8f5" font-size="8.5">in real-time - no buffering - async</text>
+
+  <!-- outer border glow -->
+  <rect x="1" y="1" width="898" height="618" rx="16" fill="none" stroke="#5bc8f5" stroke-width="1" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</svg>
