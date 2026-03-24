@@ -3,8 +3,7 @@
   <img width="350" height="350" src="logo/logo.png">
 </p>
 
-**Hackathon**: The Hackindia Hackathon 2026 (MEC)  
-**Team**: Cyber Wolf
+**Team**: Wolf Scanner 
 
 ### Project Purpose
 - **Goal**: Turn raw user activity on web applications into structured security and behavior telemetry.  
