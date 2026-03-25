@@ -1,4 +1,4 @@
-## Wolf Scanner Additional Security Features
+## Wolf Scanner Additional Security 
 
 ```mermaid
 flowchart TD
