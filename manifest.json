@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Wolf Scanner 2026",
+  "name": "Wolf Scanner 2026", 
   "version": "1.0.0",
   "description": "Sends browser activity logs to Wolf SIEM sensor API",
   "icons": {
