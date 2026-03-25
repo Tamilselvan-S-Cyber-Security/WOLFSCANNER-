@@ -1,0 +1,33 @@
+# Git and IDE
+.git
+.gitignore
+.idea
+.vscode
+*.swp
+*.swo
+
+# Dependencies (reinstalled in container)
+vendor/
+
+# Logs and temp
+assets/logs/*.log
+tmp/*
+
+# Local config (use env vars or mount)
+config/local/config.local.ini
+
+# Tests and dev
+tests/
+coverage/
+.phpunit.result.cache
+phpunit.xml
+phpstan.neon
+phpcs.xml
+
+# Docs and misc
+*.md
+!README.md
+ppt-contents-for-all-details.txt
+user_details.md
+simple_sensor_test.py
+run_core.bat

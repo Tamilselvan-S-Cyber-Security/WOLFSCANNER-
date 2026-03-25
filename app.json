@@ -1,0 +1,48 @@
+{
+    "name": "Wolf Security scanner",
+    "description": "Open security framework. Understand, monitor, and protect your application from cyber threats, account takeovers, and abuse.",
+    "website": "https://www.cyberwolf.pro",
+    "repository": "https://github.com/cyberwolfpro/wolf-security-scanner",
+    "logo": "https://www.cyberwolf.pro/logo.png",
+    "keywords": [
+        "wolf-security-scanner",
+        "cyberwolf",
+        "fraud-detection",
+        "audit-trail",
+        "analytics",
+        "monitoring",
+        "bot-detection",
+        "antispam",
+        "application-monitoring"
+    ],
+    "success_url": "/install/index.php?mode=schema",
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "15"
+            }
+        },
+        {
+            "plan": "scheduler"
+        }
+    ],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "basic"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/php"
+        }
+    ],
+    "env": {
+        "FORCE_HTTPS": {
+            "description": "Secure HTTP for SITE variable",
+            "required": true,
+            "value": "True"
+        }
+    }
+}
