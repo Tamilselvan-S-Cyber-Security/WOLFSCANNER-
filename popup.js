@@ -7,7 +7,7 @@ function showStatus(message, isError) {
   statusEl.textContent = message;
   statusEl.className = 'status ' + (isError ? 'error' : 'success');
 }
-
+ // this is the chrome storge api function
 chrome.storage.sync.get(['apiKey', 'userName'], (stored) => {
   if (stored.apiKey) apiKeyInput.value = stored.apiKey;
   if (stored.userName) userNameInput.value = stored.userName;
