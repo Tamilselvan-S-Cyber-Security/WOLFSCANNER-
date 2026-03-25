@@ -153,3 +153,4 @@
     sendActivity('page_view', { spaUrl: location.href });
   });
 })();
+// this code is for runing purpus 
