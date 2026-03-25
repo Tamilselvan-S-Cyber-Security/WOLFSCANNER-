@@ -1,4 +1,4 @@
-## WOLF SCANNER
+## Title: Real-Time Log Monitoring and Intrusion Detection ( WOLF SCANNER )
 <p align="center">
   <img width="350" height="350" src="logo/logo.png">
 </p>
