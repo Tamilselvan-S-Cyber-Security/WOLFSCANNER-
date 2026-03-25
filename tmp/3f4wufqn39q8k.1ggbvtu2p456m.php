@@ -1,0 +1,38 @@
+<?php if (isset($showChart) && 1 === $showChart): ?>
+    <div class="main-graph separate-graph">
+        <?php echo $this->render('templates/parts/forms/filtersForm.html',NULL,['hidden'=>true]+get_defined_vars(),0); ?>
+        <div class="stat-chart"></div>
+    </div>
+<?php endif; ?>
+
+<div class="card events-card">
+    <header class="card-header">
+        <div class="card-header-title">
+            <?= ($AdminBlacklst_table_title)."
+" ?>
+            <span>&#8943;</span><p class="tooltip-info tooltip" title="<?= ($AdminBlacklst_table_title_tooltip) ?>"><?php echo $this->render('images/icons/information.svg',NULL,get_defined_vars(),0); ?></p>
+        </div>
+    </header>
+
+    <div class="card-table">
+        <div class="content">
+            <?php echo $this->render('templates/parts/forms/searchForm.html',NULL,get_defined_vars(),0); ?>
+
+            <?php if ($ALLOW_EMAIL_PHONE): ?>
+                <?php echo $this->render('templates/parts/choices/entityType.html',NULL,get_defined_vars(),0); ?>
+            <?php endif; ?>
+
+            <table class="table dim-table" id="blacklist-table">
+                <thead>
+                    <tr>
+                        <th class="tooltip blacklist-user-col" title="<?= ($Base_table_column_user_risk_score_and_email_tooltip) ?>"><?= ($Base_table_column_user_risk_score_and_email) ?></th>
+                        <th class="tooltip blacklist-timestamp-col" title="<?= ($Base_table_column_blacklist_added_tooltip) ?>"><?= ($Base_table_column_blacklist_added) ?></th>
+                        <th class="tooltip blacklist-type-col" title="<?= ($Base_table_column_blacklist_type_tooltip) ?>"><?= ($Base_table_column_blacklist_type) ?></th>
+                        <th class="tooltip blacklist-value-col" title="<?= ($Base_table_column_blacklist_value_tooltip) ?>"><?= ($Base_table_column_blacklist_value) ?></th>
+                        <th class="tooltip blacklist-button-col" title="<?= ($Base_table_column_blacklist_actions_tooltip) ?>"><?= ($Base_table_column_blacklist_actions) ?></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>

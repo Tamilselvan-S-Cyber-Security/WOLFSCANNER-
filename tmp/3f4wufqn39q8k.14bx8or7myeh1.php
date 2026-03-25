@@ -1,0 +1,31 @@
+<div class="card events-card" data-item-id="rules-presets-form">
+    <form method="POST" action="<?= ($BASE) ?><?= (Base::instance()->alias('rules')) ?>" id="apply-rules-set-form">
+        <input type="hidden" name="token" value="<?= ($CSRF) ?>">
+        <input type="hidden" name="cmd" value="applyRulesPreset" />
+        <input type="hidden" name="keyId" value="<?= ($apiKeyId) ?>">
+
+        <header class="card-header">
+            <div class="card-header-title"><?= ($AdminApplyRulesPresets_form_title) ?><p class="tooltip-info tooltip" title="<?= ($AdminApplyRulesPresets_form_title_tooltip) ?>"><?php echo $this->render('images/icons/information.svg',NULL,get_defined_vars(),0); ?></p>
+            </div>
+        </header>
+
+        <div class="card-content">
+            <div class="content">
+                <?= ($AdminApplyRulesPresets_form_field_warning)."
+" ?>
+                <div class="field">
+                    <label class="label"><?= ($AdminApplyRulesPresets_form_field_label) ?></label>
+                    <div class="control">
+                        <?php echo $this->render('templates/parts/rulesPresetsSelector.html',NULL,get_defined_vars(),0); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="card-footer">
+            <input type="submit" class="button is-warning" id="apply-rules-set-btn" value="<?= ($AdminApplyRulesPresets_form_button_save) ?>" disabled>
+        </footer>
+    </form>
+</div>
+
+

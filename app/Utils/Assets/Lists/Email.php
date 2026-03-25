@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Wolf Security scanner ~ open-source security framework
+ * Copyright (c) Wolf Security scanner Team Sàrl (https://www.cyberwolf.pro)
+ *
+ * Licensed under GNU Affero General Public License version 3 of the or any later version.
+ * For full copyright and license information, please see the LICENSE
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Wolf Security scanner Team Sàrl (https://www.cyberwolf.pro)
+ * @license       https://opensource.org/licenses/AGPL-3.0 AGPL License
+ * @link          https://www.cyberwolf.pro Wolf Security scanner
+ */
+
+declare(strict_types=1);
+
+namespace Wolf\Utils\Assets\Lists;
+
+class Email extends Base {
+    protected static string $extensionFile = 'email.php';
+
+    protected static array $list = [
+        'spam',
+        'test',
+        'gummie',
+        'dummy',
+        '123',
+        '321',
+        '000',
+        '111',
+        '222',
+        '333',
+        '444',
+        '555',
+        '666',
+        '777',
+        '888',
+        '999',
+    ];
+}

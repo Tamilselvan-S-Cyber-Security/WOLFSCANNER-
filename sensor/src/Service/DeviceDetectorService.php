@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * Wolf Security scanner ~ open-source security framework
+ * Copyright (c) Wolf Security scanner Team Sàrl (https://www.cyberwolf.pro)
+ *
+ * Licensed under GNU Affero General Public License version 3 of the or any later version.
+ * For full copyright and license information, please see the LICENSE
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Wolf Security scanner Team Sàrl (https://www.cyberwolf.pro)
+ * @license       https://opensource.org/licenses/AGPL-3.0 AGPL License
+ * @link          https://www.cyberwolf.pro Wolf Security scanner
+ */
+
+declare(strict_types=1);
+
+namespace Sensor\Service;
+
+use DeviceDetector\DeviceDetector;
+use DeviceDetector\Parser\Device\AbstractDeviceParser;
+use Sensor\Repository\UserAgentRepository;
+use Sensor\Dto\GetApiKeyDto;
+use Sensor\Model\DeviceDetected;
+
+class DeviceDetectorService {
+    public function __construct(
+        private UserAgentRepository $userAgentRepository,
+    ) {
+    }
+
+    public function parse(GetApiKeyDto $apiKeyDto, ?string $userAgent): ?DeviceDetected {
+        if ($userAgent === null || $apiKeyDto->skipEnrichingUserAgents || $this->userAgentRepository->isChecked($userAgent, $apiKeyDto->id)) {
+            return null;
+        }
+
+        $detector = new DeviceDetector($userAgent);
+        $detector->parse();
+
+        $deviceType = null;
+        $browserName = null;
+        $browserVersion = null;
+        $osName = null;
+        $osVersion = null;
+        $modified = false;
+
+        if ($detector->isBot()) {
+            $deviceType = 'bot';
+            $botInfo = $detector->getBot();
+            $osName = $this->valueOrNull('name', $botInfo);
+            $modified = true;
+        } else {
+            $deviceTypeInt = $detector->getDevice();
+            $clientInfo = $detector->getClient();
+            $osInfo = $detector->getOs();
+
+            $deviceType = $deviceTypeInt !== null ? AbstractDeviceParser::getDeviceName($deviceTypeInt) : null;
+            $browserName = $this->valueOrNull('name', $clientInfo);
+            $browserVersion = $this->valueOrNull('version', $clientInfo);
+            $osName = $this->valueOrNull('name', $osInfo);
+            $osVersion = $this->valueOrNull('version', $osInfo);
+
+            // UA libraries frequently classify Windows 11 as Windows 10 due to
+            // the "Windows NT 10.0" token. Promote to 11 only for explicit
+            // Windows 11 markers to avoid relabeling real Windows 10 traffic.
+            if (
+                $osName === 'Windows' &&
+                $osVersion === '10' &&
+                preg_match('/Windows(?:[-\/\s])11(?!\d)/i', $userAgent)
+            ) {
+                $osVersion = '11';
+            }
+
+            $modified = $deviceType === null;
+        }
+
+        return new DeviceDetected(
+            $deviceType,
+            $browserName,
+            $browserVersion,
+            $osName,
+            $osVersion,
+            $userAgent,
+            $modified,
+        );
+    }
+
+    private function valueOrNull(string $key, mixed $array): ?string {
+        if (!is_array($array) || !array_key_exists($key, $array)) {
+            return null;
+        }
+
+        return ($array[$key] !== '') ? $array[$key] : null;
+    }
+}
